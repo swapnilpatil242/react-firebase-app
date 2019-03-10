@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### Steps to start and followed for the project
+- create new reactjs project
+- install elint ..etc packages for editor
+- install chrome extension for react developer tool
+    - For sublime text : (https://github.com/facebookarchive/sublime-react)
+    - For visual studio code :(https://code.visualstudio.com/docs/nodejs/reactjs-tutorial)
+- setup the .env variables
