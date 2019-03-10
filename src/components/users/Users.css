@@ -4,3 +4,15 @@
 .UsersTable {
   margin: 20px;
 }
+.UsersSearch {
+  float: left;
+  margin: 20px;
+}
+.ClearFilter {
+  position: absolute;
+  margin-left: 15px;
+}
+.SearchBar {
+  margin-left: 20px;
+  padding-bottom: 10px;
+}
