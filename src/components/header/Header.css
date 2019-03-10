@@ -1,4 +1,44 @@
-.HeaderApp {
-  padding: 10px;
-  color: skyblue;
+.Header {
+  height: 100px;
+  width: 100%;
+  background-color: cadetblue;
+  display:flex;
+  justify-content:space-between;
+  padding: 30px;
+}
+.MenuAlignRight {
+  display: -webkit-box;
+  margin-right: 30px;
+}
+.HeaderTitle {
+  font-weight: 600;
+}
+.AppLogo {
+  height: 50px;
+  width: 50px;
+}
+.UserProfile {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.AppMenu {
+  margin: 5px;
+}
+.Header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Header li {
+  display: inline-block;
+  margin: 15px; 
+}
+.Header a {
+  text-decoration: none;
+  color: black;
+}
+.btn-primary {
+  background-color: transparent !important;
+  border: transparent !important;
 }
