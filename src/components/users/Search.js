@@ -2,7 +2,7 @@ import React from 'react';
 
 let Search = ({ onChange }) => {
   return (
-    <input type='text' className="EmpSearch" onChange={onChange}></input>
+    <input type='text' className="EmpSearch" onChange={onChange} placeholder="Search by name"></input>
   );
 }
 

@@ -4,6 +4,7 @@ import UsersTable from './usersTable/UsersTable';
 import Axios from 'axios';
 import Search from './Search';
 import { Button } from 'react-bootstrap';
+import FilterDateCalender from "./FilterDateCalender";
 
 class Users extends Component {
   constructor(props) {
@@ -14,7 +15,9 @@ class Users extends Component {
       usersData: [],
       searchData: undefined,
       searchField: undefined,
+      startDate: null
     }
+    this.onChangeFilterDatehandle = this.onChangeFilterDatehandle.bind(this);
     this.onInputSearch = this.onInputSearch.bind(this);
     this.onClickClearFilter = this.onClickClearFilter.bind(this);
   }
@@ -47,7 +50,16 @@ class Users extends Component {
   // clear filter
   onClickClearFilter() {
     this.setState({
-      searchData: undefined
+      searchData: undefined,
+      startDate: undefined
+    });
+  }
+  // date filter
+  onChangeFilterDatehandle(date) {
+    this.setState({
+      startDate: date,
+      searchData: date,
+      searchField: 'date'
     });
   }
 
@@ -62,7 +74,7 @@ class Users extends Component {
         tempUsersData[key]["recordKey"] = key;
         finalData.push(tempUsersData[key]);
       });      
-
+      // Search by input
       if (searcFilter !== undefined) {
         if (this.state.searchField === 'input') {
           const filteredUsersData = finalData.filter(users => {
@@ -71,18 +83,27 @@ class Users extends Component {
           finalData = filteredUsersData;
         }
       }
+      // checked the date field filter 
+      if (this.state.searchField === 'date' && this.state.searchData !== undefined) {
+        const filteredEmployee = finalData.filter(employee => {
+          let recordDate = new Date(employee.birthDate);
+          return recordDate.toDateString().indexOf(searcFilter.toDateString()) !== -1;
+        });
+        finalData = filteredEmployee;
+      }
     }else{
       finalData = this.state.usersData;
     }
-
+    
     return (
       <div className="Users">
         <div className="SearchBar">
           <Search onChange={this.onInputSearch} />
+          <FilterDateCalender onChange={this.onChangeFilterDatehandle} selected={this.state.startDate} />
           <Button variant="outline-info ClearFilter" onClick={this.onClickClearFilter}>Clear filters</Button>
         </div>
         <div className="UsersTable">
-          <UsersTable usersData={finalData} />
+          <UsersTable usersData={finalData} isItSearch={this.state.searchData ? true : false}/>
         </div>
       </div>
     );

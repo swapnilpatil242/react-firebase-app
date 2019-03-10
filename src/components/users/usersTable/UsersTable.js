@@ -9,7 +9,7 @@ class UsersTable extends Component {
     let tableRow = null;
     
     if (usersData === undefined || usersData === null || usersData.length === 0) {
-      if (usersData == null) {
+      if (usersData == null || this.props.isItSearch) {
         tableRow = <tr><td colSpan="5" className="TextCenter">Data is empty</td></tr>
       }
       else {
@@ -35,7 +35,7 @@ class UsersTable extends Component {
           <tr>
             <th>User Name</th>
             <th>Email</th>
-            <th>DOB</th>
+            <th>DOB (mm/dd/yyyy)</th>
             <th>Designation</th>
             <th>Gender</th>
           </tr>
