@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Header from '../src/components/header/Header'
+import Footer from '../src/components/footer/Footer'
+import Home from '../src/components/home/Home'
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-
-          {/* <p> ENV variable access:: { process.env.REACT_APP_VERSION } </p> */}
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Header />
+          <Home />
+          <Footer />
         </header>
       </div>
     );
