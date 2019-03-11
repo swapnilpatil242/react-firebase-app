@@ -19,3 +19,10 @@
 .FilterDateCal {
   margin-left: 20px;
 }
+.AddButton {
+  float: right;
+  margin-right: 20px;
+}
+.AlignCenter {
+  text-align: center;
+}

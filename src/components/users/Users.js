@@ -5,6 +5,7 @@ import Axios from 'axios';
 import Search from './Search';
 import { Button } from 'react-bootstrap';
 import FilterDateCalender from "./FilterDateCalender";
+import AddButton from './AddButton';
 
 class Users extends Component {
   constructor(props) {
@@ -101,6 +102,7 @@ class Users extends Component {
           <Search onChange={this.onInputSearch} />
           <FilterDateCalender onChange={this.onChangeFilterDatehandle} selected={this.state.startDate} />
           <Button variant="outline-info ClearFilter" onClick={this.onClickClearFilter}>Clear filters</Button>
+          <AddButton />
         </div>
         <div className="UsersTable">
           <UsersTable usersData={finalData} isItSearch={this.state.searchData ? true : false}/>

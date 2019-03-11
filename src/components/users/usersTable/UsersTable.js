@@ -25,6 +25,8 @@ class UsersTable extends Component {
             <td> {row.birthDate} </td>
             <td> {row.designation} </td>
             <td> {row.gender} </td>
+            <td className="AlignCenter"> <i className="fa fa-pencil MousePointerSty" aria-hidden="true"></i></td>
+            <td className="AlignCenter"> <i className="fa fa-trash MousePointerSty" aria-hidden="true"></i></td>
           </tr>
         );
       })
@@ -38,6 +40,8 @@ class UsersTable extends Component {
             <th>DOB (mm/dd/yyyy)</th>
             <th>Designation</th>
             <th>Gender</th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>{tableRow}</tbody>
