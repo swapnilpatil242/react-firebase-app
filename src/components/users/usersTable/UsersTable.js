@@ -21,7 +21,7 @@ class UsersTable extends Component {
       tableRow = usersData.map((row, index) => {
         return (
           <tr key={index}>
-            <td> {row.userFullName} </td>
+            <td> <Link to={`/users/${row.recordKey}`} params={{ id: index, recordKey: row.recordKey }} >{row.userFullName}</Link></td>
             <td> {row.emailAddress} </td>
             <td> {row.birthDate} </td>
             <td> {row.designation} </td>

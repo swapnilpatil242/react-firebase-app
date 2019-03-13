@@ -8,6 +8,7 @@ import Users from './components/users/Users'
 import { BrowserRouter, Route } from 'react-router-dom';
 import UserForm from './components/users/userForm/UserForm';
 import UserEditForm from './components/users/userForm/UsersEditForm';
+import UsersDetails from './components/users/userForm/UsersDetails';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path="/users" exact component={Users}></Route>
             <Route path="/users/new" exact component={UserForm}></Route>
             <Route path="/users/:id/edit" exact component={UserEditForm}></Route>
+            <Route path="/users/:id" exact component={UsersDetails}></Route>
             <Footer />
           </header>
         </div>
