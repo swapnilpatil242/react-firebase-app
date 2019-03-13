@@ -86,11 +86,11 @@ class Users extends Component {
       }
       // checked the date field filter 
       if (this.state.searchField === 'date' && this.state.searchData !== undefined) {
-        const filteredEmployee = finalData.filter(employee => {
-          let recordDate = new Date(employee.birthDate);
+        const filteredUsers = finalData.filter(user => {
+          let recordDate = new Date(user.birthDate);
           return recordDate.toDateString().indexOf(searcFilter.toDateString()) !== -1;
         });
-        finalData = filteredEmployee;
+        finalData = filteredUsers;
       }
     }else{
       finalData = this.state.usersData;

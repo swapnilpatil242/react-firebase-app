@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 const AddButton = () => {
   return (
-    <Button variant="outline-info AddButton">Add New Emp</Button>
+    <Link to="/users/new"><Button variant="outline-info AddButton">Add New User</Button></Link>
   );
 }
 

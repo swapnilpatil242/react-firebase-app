@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer'
 import Home from './components/home/Home'
 import Users from './components/users/Users'
 import { BrowserRouter, Route } from 'react-router-dom';
+import UserForm from './components/users/userForm/UserForm';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Header />
             <Route path="/" exact component={Home}></Route>
             <Route path="/users" exact component={Users}></Route>
+            <Route path="/users/new" exact component={UserForm}></Route>
             <Footer />
           </header>
         </div>
