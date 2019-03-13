@@ -1,3 +1,10 @@
 .TextCenter {
   text-align: center;
 }
+.AlignCenter{
+  text-align: center;
+}
+.MousePointerSty {
+  cursor: pointer;
+  color: black !important;
+}

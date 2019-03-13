@@ -47,7 +47,7 @@ class UserForm extends Component {
         <div className="UserForm">
           <form onSubmit={this.onSubmitUserData}>
             <div className="InputFields">
-              First name :
+              Full name :
               <input type="text" name="userFullName" value={this.state.userFullName} onChange={this.onChangeUserFormInput} />
             </div>
             <div className="InputFields">
@@ -59,7 +59,7 @@ class UserForm extends Component {
               <input type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onChangeUserFormInput} />
             </div>
             <div className="InputFields">
-              Job Title :
+              Designation :
               <input type="text" name="designation" value={this.state.designation} onChange={this.onChangeUserFormInput} />
             </div>
             <div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import "./UsersTable.css";
+import { Link } from "react-router-dom";
 
 class UsersTable extends Component {
 
@@ -25,7 +26,7 @@ class UsersTable extends Component {
             <td> {row.birthDate} </td>
             <td> {row.designation} </td>
             <td> {row.gender} </td>
-            <td className="AlignCenter"> <i className="fa fa-pencil MousePointerSty" aria-hidden="true"></i></td>
+            <td className="AlignCenter"><Link to={`/users/${row.recordKey}/edit`} params={{ id: index, recordKey: row.recordKey }} > <i className="fa fa-pencil MousePointerSty" aria-hidden="true"></i> </Link></td>    
             <td className="AlignCenter"> <i className="fa fa-trash MousePointerSty" aria-hidden="true"></i></td>
           </tr>
         );

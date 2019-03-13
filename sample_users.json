@@ -1,0 +1,34 @@
+{
+  "Users": {
+    "one": {
+      "userId": "swapnil",
+      "userFullName": "Swapnil Patil",
+      "isActive": "true",
+      "phoneNumber": "4081234567",
+      "emailAddress": "swa123abcas234xx@gmail.com",
+      "birthDate": "02/04/1993",
+      "gender": "Male",
+      "designation": "Developer"
+    },
+    "two": {
+      "userId": "tushar",
+      "userFullName": "tushar Patil",
+      "isActive": "false",
+      "phoneNumber": "4081234567",
+      "emailAddress": "tush6354abcas234xx@gmail.com",
+      "birthDate": "04/03/1992",
+      "gender": "Male",
+      "designation": "Tester"
+    },
+    "three": {
+      "userId": "nimali",
+      "userFullName": "nimali marken",
+      "isActive": "true",
+      "phoneNumber": "8996234567",
+      "emailAddress": "nima23abcas234xx@gmail.com",
+      "birthDate": "08/24/1995",
+      "gender": "Female",
+      "designation": "Manager"
+    }
+  }
+}
