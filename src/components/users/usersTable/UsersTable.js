@@ -2,8 +2,21 @@ import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
 import "./UsersTable.css";
 import { Link } from "react-router-dom";
+import Axios from 'axios';
 
 class UsersTable extends Component {
+  constructor(props) {
+    super(props);
+    this.onClickDeleteUser = this.onClickDeleteUser.bind(this);
+  }
+  
+  onClickDeleteUser(event) {
+    let recordKey = event.target.attributes.getNamedItem('data-record-key').value
+    Axios.delete(`${process.env.REACT_APP_FIREBASE_APP_URL}/Users/${recordKey}.json`)
+      .then(response => {
+        console.log("deleted..", response.status);
+      })
+  }
 
   render() {
     const usersData = this.props.usersData;
@@ -27,7 +40,7 @@ class UsersTable extends Component {
             <td> {row.designation} </td>
             <td> {row.gender} </td>
             <td className="AlignCenter"><Link to={`/users/${row.recordKey}/edit`} params={{ id: index, recordKey: row.recordKey }} > <i className="fa fa-pencil MousePointerSty" aria-hidden="true"></i> </Link></td>    
-            <td className="AlignCenter"> <i className="fa fa-trash MousePointerSty" aria-hidden="true"></i></td>
+            <td className="AlignCenter"> <i className="fa fa-trash MousePointerSty" aria-hidden="true" data-record-key={row.recordKey} onClick={this.onClickDeleteUser}></i> </td>
           </tr>
         );
       })
