@@ -14,7 +14,7 @@ class UsersTable extends Component {
     let recordKey = event.target.attributes.getNamedItem('data-record-key').value
     Axios.delete(`${process.env.REACT_APP_FIREBASE_APP_URL}/Users/${recordKey}.json`)
       .then(response => {
-        console.log("deleted..", response.status);
+        this.props.getUserListAfterDelete()
       })
   }
 

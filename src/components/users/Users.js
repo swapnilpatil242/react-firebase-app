@@ -24,13 +24,7 @@ class Users extends Component {
   }
 
   componentDidMount() {
-    Axios.get(`${process.env.REACT_APP_FIREBASE_APP_URL}/Users.json`)
-      .then(response => {
-        const usersResponse = response.data;
-        this.setState({
-          usersData: usersResponse
-        })
-      })
+    this.callGetApiToGetUserList()
   }
   // input search form users tables
   onInputSearch (e) {
@@ -62,6 +56,21 @@ class Users extends Component {
       searchData: date,
       searchField: 'date'
     });
+  }
+  //
+  getUserListAfterDelete(){
+    console.log("called..........");
+    this.callGetApiToGetUserList()
+  }
+  // 
+  callGetApiToGetUserList() {
+    Axios.get(`${process.env.REACT_APP_FIREBASE_APP_URL}/Users.json`)
+      .then(response => {
+        const usersResponse = response.data;
+        this.setState({
+          usersData: usersResponse
+        })
+      })
   }
 
   render() {
@@ -105,7 +114,7 @@ class Users extends Component {
           <AddButton />
         </div>
         <div className="UsersTable">
-          <UsersTable usersData={finalData} isItSearch={this.state.searchData ? true : false}/>
+          <UsersTable usersData={finalData} isItSearch={this.state.searchData ? true : false} getUserListAfterDelete={this.getUserListAfterDelete.bind(this)}/>
         </div>
       </div>
     );
