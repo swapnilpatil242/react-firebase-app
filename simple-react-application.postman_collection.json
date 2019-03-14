@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "78d76a4b-78da-400d-be62-ed32bfdc16a8",
+		"name": "simple-react-application",
+		"description": "This is practice gs assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Users List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://simple-react-app-9a98c.firebaseio.com/Users.json",
+					"protocol": "https",
+					"host": [
+						"simple-react-app-9a98c",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Users.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{\n\t\"emailAddress\" : \"ram@gsl@.com\",\n\t\"employeeCode\" : \"A1\",\n\t\"firstName\" : \"ram\",\n\t\"jobTitleName\" : \"Developer\",\n\t\"joinDate\" : \"03/07/2019\",\n\t\"lastName\" : \"Irani\",\n\t\"phoneNumber\" : \"4081234567\",\n\t\"preferredFullName\" : \"ram Rathod\",\n\t\"region\" : \"In\",\n\t\"userId\" : \"avi123\"\n}"
+				},
+				"url": {
+					"raw": "https://simple-react-app-9a98c.firebaseio.com/Users.json",
+					"protocol": "https",
+					"host": [
+						"simple-react-app-9a98c",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Users.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Emp",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://simple-react-app-9a98c.firebaseio.com/Users/-L_sGZv2ToSwwsoGLOaD.json",
+					"protocol": "https",
+					"host": [
+						"simple-react-app-9a98c",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Users",
+						"-L_sGZv2ToSwwsoGLOaD.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update users details",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"phoneNumber\":\"1234567890\",\n\t\"emailAddress\": \"harsh@gs123.com\",\n\t\"firstName\": \"Harsh\",\n\t\"jobTitleName\": \"Developer\"\n\t\n}"
+				},
+				"url": {
+					"raw": "https://simple-react-app-9a98c.firebaseio.com/Users/-L_wlTSwR6PeNr1wfnyJ.json",
+					"protocol": "https",
+					"host": [
+						"simple-react-app-9a98c",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Users",
+						"-L_wlTSwR6PeNr1wfnyJ.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Single user data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://simple-react-app-9a98c.firebaseio.com/Users/-L_wlTSwR6PeNr1wfnyJ.json",
+					"protocol": "https",
+					"host": [
+						"simple-react-app-9a98c",
+						"firebaseio",
+						"com"
+					],
+					"path": [
+						"Users",
+						"-L_wlTSwR6PeNr1wfnyJ.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
